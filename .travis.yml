@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-    - "8"
+    - "9"
 
 sudo: required
 
@@ -10,3 +10,13 @@ install:
 
 test:
   - npm run test
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: "9"
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        auth_token: $NPM_AUTH_TOKEN
+        on: deploy-npm-release
