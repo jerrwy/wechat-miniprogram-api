@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jerrwy/wechat-miniprogram-api/issues"
   },
-  "homepage": "https://github.com/jerrwy/wechat-miniprogram-api#readme"
+  "homepage": "https://github.com/jerrwy/wechat-miniprogram-api#readme",
+  "dependencies": {
+    "urllib": "^2.29.1"
+  }
 }
