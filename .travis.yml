@@ -8,8 +8,8 @@ sudo: required
 install:
   - npm install
 
-# test:
-#   - npm run test
+test:
+  - npm run test
 
 deploy:
   provider: npm
