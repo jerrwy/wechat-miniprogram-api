@@ -4,14 +4,14 @@
 
 实现参考了[wechat-api](https://github.com/node-webot/wechat-api)库
 
-## todo
+## 功能
 
-- [ ] 登录
-- [ ] 授权
-- [ ] 用户信息
-- [ ] 微信支付
+- [x] 登录
 - [x] 接口调用凭证
 - [x] 模板消息
 - [ ] 客服消息
 - [ ] 获取二维码
+
+## 拓展功能
+
 - [ ] formId管理

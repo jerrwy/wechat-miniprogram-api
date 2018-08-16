@@ -23,5 +23,10 @@
   "homepage": "https://github.com/jerrwy/wechat-miniprogram-api#readme",
   "dependencies": {
     "urllib": "^2.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
   }
 }
