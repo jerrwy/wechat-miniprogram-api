@@ -1,6 +1,6 @@
 {
   "name": "wechat-miniprogram-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "wechat miniprogram api",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jerrwy/wechat-miniprogram-api#readme",
   "dependencies": {
+    "formstream": "^1.1.0",
     "urllib": "^2.29.1"
   },
   "devDependencies": {
