@@ -7,5 +7,7 @@ API.mixin(require('./lib/api_login'))
 API.mixin(require('./lib/api_template'))
 // 客服消息
 API.mixin(require('./lib/api_message'))
+// 临时素材
+API.mixin(require('./lib/api_media'))
 
 module.exports = API
