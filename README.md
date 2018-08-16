@@ -4,6 +4,11 @@
 
 实现参考了[wechat-api](https://github.com/node-webot/wechat-api)库
 
+## 模块状态
+
+- [![npm version](https://badge.fury.io/js/wechat-miniprogram-api.svg)](https://badge.fury.io/js/wechat-miniprogram-api)
+- [![Build Status](https://travis-ci.org/jerrwy/wechat-miniprogram-api.svg?branch=master)](https://travis-ci.org/jerrwy/wechat-miniprogram-api)
+
 ## 功能
 
 - [x] 登录
