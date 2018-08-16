@@ -51,4 +51,16 @@ describe('api_common', () => {
       }).toThrow(/Don't allow override existed prototype method\./);
     });
   });
+
+  describe.skip('clearQuota', () => {
+    it('should ok', (done) => {
+      var api = new API(config.appid, config.appsecret);
+      api.clearQuota((err, data)=> {
+        expect(err).toBeNull();
+        expect(data.errcode).toBe(0);
+        expect(data.errmsg).toBe('ok');
+      });
+    });
+  });
+
 });
