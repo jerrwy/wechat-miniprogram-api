@@ -9,5 +9,7 @@ API.mixin(require('./lib/api_template'))
 API.mixin(require('./lib/api_message'))
 // 临时素材
 API.mixin(require('./lib/api_media'))
+// 二维码
+API.mixin(require('./lib/api_wxacode'))
 
 module.exports = API
