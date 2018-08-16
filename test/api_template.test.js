@@ -71,6 +71,16 @@ describe('api_template', () => {
         done()
       })
     })
+
+    it('should not ok', (done) => {
+      var api = new API('appid', 'appsecret')
+      api.getTemplateList((err, data) => {
+        expect(err).not.toBeNull()
+        expect(err.name).toEqual('WeChatAPIError')
+        expect(err.message).toMatch(/invalid appid hint/)
+        done()
+      })
+    })
   })
 
 })
