@@ -8,6 +8,7 @@
 
 - [![npm version](https://badge.fury.io/js/wechat-miniprogram-api.svg)](https://badge.fury.io/js/wechat-miniprogram-api)
 - [![Build Status](https://travis-ci.org/jerrwy/wechat-miniprogram-api.svg?branch=master)](https://travis-ci.org/jerrwy/wechat-miniprogram-api)
+- [![Dependencies Status](https://david-dm.org/jerrwy/wechat-miniprogram-api.png)](https://david-dm.org/jerrwy/wechat-miniprogram-api)
 
 ## 功能
 
