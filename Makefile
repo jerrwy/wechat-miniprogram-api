@@ -19,7 +19,7 @@ test-cov:
 	@$(ISTANBUL) cover --report html $(MOCHA) -- -t $(TIMEOUT) -R $(REPORTER) $(TESTS)
 
 test-coveralls:
-	@$(ISTANBUL) cover --report lcovonly $(MOCHA) -- -t $(TIMEOUT) -R spec $(TESTS)
+	@$(ISTANBUL) cover --report lcovonly $(MOCHA) -- -t $(TIMEOUT) -R $(REPORTER) $(TESTS)
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@cat ./coverage/lcov.info | $(COVERALLS) && rm -rf ./coverage
 

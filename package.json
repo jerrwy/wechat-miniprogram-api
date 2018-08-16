@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jerrwy/wechat-miniprogram-api#readme",
   "dependencies": {
     "formstream": "^1.1.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "urllib": "^2.29.1"
   },
   "devDependencies": {
