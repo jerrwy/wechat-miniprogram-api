@@ -8,9 +8,6 @@ sudo: required
 install:
   - npm install
 
-test:
-  - make test-coveralls
-
 deploy:
   provider: npm
   email: 527606652@qq.com
