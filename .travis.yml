@@ -9,7 +9,7 @@ install:
   - npm install
 
 test:
-  - npm run test
+  - make test-coveralls
 
 deploy:
   provider: npm

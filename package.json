@@ -4,7 +4,7 @@
   "description": "wechat miniprogram api",
   "main": "index.js",
   "scripts": {
-    "test": "echo success",
+    "test": "make test",
     "cover": "make cover"
   },
   "repository": {
