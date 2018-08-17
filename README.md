@@ -9,6 +9,7 @@
 - [![npm version](https://badge.fury.io/js/wechat-miniprogram-api.svg)](https://badge.fury.io/js/wechat-miniprogram-api)
 - [![Build Status](https://travis-ci.org/jerrwy/wechat-miniprogram-api.svg?branch=master)](https://travis-ci.org/jerrwy/wechat-miniprogram-api)
 - [![Dependencies Status](https://david-dm.org/jerrwy/wechat-miniprogram-api.png)](https://david-dm.org/jerrwy/wechat-miniprogram-api)
+- [![Coverage Status](https://coveralls.io/repos/github/jerrwy/wechat-miniprogram-api/badge.svg?branch=master)](https://coveralls.io/github/jerrwy/wechat-miniprogram-api?branch=master)
 
 ## 功能
 
