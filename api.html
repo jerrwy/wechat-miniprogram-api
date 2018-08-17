@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>wechat-miniprogram-api Documentation</title>
+    <meta name="keywords" content="wechat,miniprogram,api" />
+    <meta name="description" content="wechat miniprogram api" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">wechat-miniprogram-api</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>wechat-miniprogram-api <small>Version: 0.0.5 By @jerrwy5</small></h1>
+        <p class="lead">
+          wechat miniprogram api
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="api_common">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_common" class="api_side_link">api_common</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_common" href="#collapse_api_common">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_common">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_common__API">API</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__setOpts">setOpts</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__request">request</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__getLatestToken">getLatestToken</a>
+						</li>
+					
+						<li>
+							<a href="#api_common_API_mixin">mixin</a>
+						</li>
+					
+						<li>
+							<a href="#api_common_API_patch">patch</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_login">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_login" class="api_side_link">api_login</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_login" href="#collapse_api_login">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_login">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_login_exports_jscode2session">jscode2session</a>
+						</li>
+					
+						<li>
+							<a href="#api_login_exports_decryptPayload">decryptPayload</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_media">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_media" class="api_side_link">api_media</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_media" href="#collapse_api_media">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_media">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_media_exports_getMedia">getMedia</a>
+						</li>
+					
+						<li>
+							<a href="#api_media_exports_uploadMedia">uploadMedia</a>
+						</li>
+					
+						<li>
+							<a href="#api_media_exports_uploadMediaStream">uploadMediaStream</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_message">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_message" class="api_side_link">api_message</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_message" href="#collapse_api_message">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_message">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_message_exports_sendText">sendText</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendImage">sendImage</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendLink">sendLink</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendMiniProgramPage">sendMiniProgramPage</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendTyping">sendTyping</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_template">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_template" class="api_side_link">api_template</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_template" href="#collapse_api_template">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_template">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_template_exports_getLibraryList">getLibraryList</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_getLibrary">getLibrary</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_addTemplate">addTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_getTemplateList">getTemplateList</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_delTemplate">delTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_sendTemplate">sendTemplate</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_wxacode">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_wxacode" class="api_side_link">api_wxacode</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_wxacode" href="#collapse_api_wxacode">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_wxacode">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_wxacode_exports_getwxacode">getwxacode</a>
+						</li>
+					
+						<li>
+							<a href="#api_wxacode_exports_getwxacodeunlimit">getwxacodeunlimit</a>
+						</li>
+					
+						<li>
+							<a href="#api_wxacode_exports_createwxaqrcode">createwxaqrcode</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="util">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_util" class="api_side_link">util</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_util">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#util_exports_decryptPayload">decryptPayload</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_api_common" class="api">
+  <h2>api_common: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_common__API">
+        API
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__setOpts">
+        setOpts
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__request">
+        request
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__getLatestToken">
+        getLatestToken
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common_API_mixin">
+        mixin
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common_API_patch">
+        patch
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_common__API">
+    API
+  </h3>
+
+  <p>根据appid和appsecret创建API的构造函数<br />
+如需跨进程跨机器进行操作Wechat API（依赖access token），access token需要进行全局维护<br />
+使用策略如下：</p>
+<ol>
+<li>调用用户传入的获取token的异步方法，获得token之后使用</li>
+<li>使用appid/appsecret获取token。并调用用户传入的保存token方法保存</li>
+</ol>
+<p>Tips:</p>
+<ul>
+<li>如果跨机器运行wechat模块，需要注意同步机器之间的系统时间。</li>
+</ul>
+<p>Examples:</p>
+<pre><code>var API = require('wechat-api')
+var api = new API('appid', 'secret')
+</code></pre>
+<p>以上即可满足单进程使用。<br />
+当多进程时，token需要全局维护，以下为保存token的接口。</p>
+<pre><code>var api = new API('appid', 'secret', function (callback) {
+  // 传入一个获取全局token的方法
+  fs.readFile('access_token.txt', 'utf8', function (err, txt) {
+    if (err) {return callback(err)}
+    callback(null, JSON.parse(txt))
+  })
+}, function (token, callback) {
+  // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
+  // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
+  fs.writeFile('access_token.txt', JSON.stringify(token), callback)
+})
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td colspan="3">API()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>appid(String)</td>
+      <td colspan="2"><p>在小程序平台上申请得到的appid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>appsecret(String)</td>
+      <td colspan="2"><p>在小程序平台上申请得到的app secret</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>getToken(Function)</td>
+      <td colspan="2"><p>可选的。获取全局token对象的方法，多进程模式部署时需在意</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>saveToken(Function)</td>
+      <td colspan="2"><p>可选的。保存全局token对象的方法，多进程模式部署时需在意</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common__setOpts">
+    setOpts
+  </h3>
+
+  <p>用于设置urllib的默认options</p>
+<p>Examples:</p>
+<pre><code>api.setOpts({timeout: 15000})
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.prototype.setOpts()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>默认选项</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common__request">
+    request
+  </h3>
+
+  <p>设置urllib的hook</p>
+<p>Examples:</p>
+<pre><code>api.setHook(function (options) {
+  // options
+})
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.prototype.request()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>beforeRequest(Function)</td>
+      <td colspan="2"><p>需要封装的方法</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common__getLatestToken">
+    getLatestToken
+  </h3>
+
+  <p>获取最新的token</p>
+<p>Examples:</p>
+<pre><code>api.getLatestToken(callback)
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 获取access token出现异常时的异常对象</li>
+<li><code>token</code>, 获取的token</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.prototype.getLatestToken()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>method(Function)</td>
+      <td colspan="2"><p>需要封装的方法</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>args(Array)</td>
+      <td colspan="2"><p>方法需要的参数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common_API_mixin">
+    mixin
+  </h3>
+
+  <p>用于支持对象合并。将对象合并到API.prototype上，使得能够支持扩展<br />
+Examples:</p>
+<pre><code>// 媒体管理（上传、下载）
+API.mixin(require('./lib/api_media'))
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.mixin()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>obj(Object)</td>
+      <td colspan="2"><p>要合并的对象</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common_API_patch">
+    patch
+  </h3>
+
+  <p>用于扩展API.<br />
+作用是：当微信的官方 API 添加新功能，而wechat-api没有来得及升级时，用这个方法快速添加此功能。<br />
+当 api 升级后应该用 API 内提供的方法。<br />
+Examples:</p>
+<pre><code>// 为 API 添加一个 createQr 方法。
+API.ext(&quot;createQr&quot;, &quot;https://api.weixin.qq.com/card/qrcode/create&quot;)
+</code></pre>
+<p>Usage:</p>
+<pre><code>// 调用这个 createQr 方法。
+ api.createQr({'card_id': ’dkjeuDfsfeu3242w3dnjlq23i'}, callback)
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.patch()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"><p>用户调用的方法名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>apiUrl(String)</td>
+      <td colspan="2"><p>此 API 的 url 地址</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>override(Bool)</td>
+      <td colspan="2"><p>如果填写 true 则覆盖原来 api 已有的方法， false 或不传，则抛错。</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_login" class="api">
+  <h2>api_login: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_login_exports_jscode2session">
+        jscode2session
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_login_exports_decryptPayload">
+        decryptPayload
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_login_exports_jscode2session">
+    jscode2session
+  </h3>
+
+  <p>登录凭证校验</p>
+<blockquote>
+<p>临时登录凭证校验接口是一个 HTTPS 接口，开发者服务器使用 临时登录凭证code 获取 session_key 和 openid 等。</p>
+</blockquote>
+<p>官方文档 https://developers.weixin.qq.com/miniprogram/dev/api/api-login.html#%E7%99%BB%E5%BD%95%E5%87%AD%E8%AF%81%E6%A0%A1%E9%AA%8C</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.jscode2session()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>code()</td>
+      <td colspan="2"><p>临时登录凭证code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_login_exports_decryptPayload">
+    decryptPayload
+  </h3>
+
+  <p>用户数据的解密</p>
+<p>用于getUserInfo&amp;getPhoneNumber接口数据的解密</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.decryptPayload()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>session_key()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>payload()</td>
+      <td colspan="2"><p>{ encryptedData: 包括敏感数据在内的完整用户信息的加密数据,<br />
+iv: 加密算法的初始向量<br />
+}</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_media" class="api">
+  <h2>api_media: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_media_exports_getMedia">
+        getMedia
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_media_exports_uploadMedia">
+        uploadMedia
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_media_exports_uploadMediaStream">
+        uploadMediaStream
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_media_exports_getMedia">
+    getMedia
+  </h3>
+
+  <p>获取临时素材</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getMedia()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_media_exports_uploadMedia">
+    uploadMedia
+  </h3>
+
+  <p>新增临时素材，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />
+详情请见：<a href="http://mp.weixin.qq.com/wiki/5/963fc70b80dc75483a271298a76a8d59.html">http://mp.weixin.qq.com/wiki/5/963fc70b80dc75483a271298a76a8d59.html</a><br />
+Examples:</p>
+<pre><code>api.uploadMedia('filepath', type, callback);
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p>
+<pre><code>{&quot;type&quot;:&quot;TYPE&quot;,&quot;media_id&quot;:&quot;MEDIA_ID&quot;,&quot;created_at&quot;:123456789}
+</code></pre>
+<p>Shortcut:</p>
+<ul>
+<li><code>exports.uploadImage(filepath, callback);</code></li>
+<li><code>exports.uploadVoice(filepath, callback);</code></li>
+<li><code>exports.uploadVideo(filepath, callback);</code></li>
+<li><code>exports.uploadThumb(filepath, callback);</code></li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.uploadMedia()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filepath(String)</td>
+      <td colspan="2"><p>文件路径</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2"><p>媒体类型，可用值有image、voice、video、thumb</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_media_exports_uploadMediaStream">
+    uploadMediaStream
+  </h3>
+
+  <p>流式新增临时素材，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />
+拓展自uploadMedia，实现上游上传的流数据重定向到微信服务器，省去自己服务器的文件缓存。<br />
+Examples:</p>
+<pre><code>api.uploadMediaStream(req, type, callback)
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p>
+<pre><code>{&quot;type&quot;:&quot;TYPE&quot;,&quot;media_id&quot;:&quot;MEDIA_ID&quot;,&quot;created_at&quot;:123456789}
+</code></pre>
+<p>Shortcut:</p>
+<ul>
+<li><code>exports.uploadImageStream(req, callback)</code></li>
+<li><code>exports.uploadVoiceStream(req, callback)</code></li>
+<li><code>exports.uploadVideoStream(req, callback)</code></li>
+<li><code>exports.uploadThumbStream(req, callback)</code></li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.uploadMediaStream()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>req(String)</td>
+      <td colspan="2"><p>上游Stream对象，必须包含headers属性；例如expressjs中request对象。</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2"><p>媒体类型，可用值有image、voice、video、thumb</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_message" class="api">
+  <h2>api_message: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_message_exports_sendText">
+        sendText
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_message_exports_sendImage">
+        sendImage
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_message_exports_sendLink">
+        sendLink
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_message_exports_sendMiniProgramPage">
+        sendMiniProgramPage
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_message_exports_sendTyping">
+        sendTyping
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_message_exports_sendText">
+    sendText
+  </h3>
+
+  <p>客服消息，发送文字消息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendText()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>text(String)</td>
+      <td colspan="2"><p>发送的消息内容</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_sendImage">
+    sendImage
+  </h3>
+
+  <p>客服消息，发送图片消息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendImage()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID，参见uploadMedia方法</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_sendLink">
+    sendLink
+  </h3>
+
+  <p>客服消息，发送图文链接</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendLink()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>link(Array)</td>
+      <td colspan="2"><p>图文链接</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_sendMiniProgramPage">
+    sendMiniProgramPage
+  </h3>
+
+  <p>客服消息，发送小程序卡片</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendMiniProgramPage()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>miniprogrampage(Array)</td>
+      <td colspan="2"><p>小程序卡片</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_sendTyping">
+    sendTyping
+  </h3>
+
+  <p>客服输入状态</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendTyping()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid()</td>
+      <td colspan="2"><p>普通用户(openid)</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>command()</td>
+      <td colspan="2"><p>Typing&quot;：对用户下发“正在输入&quot;状态；&quot;CancelTyping&quot;：取消对用户的”正在输入&quot;状态</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_template" class="api">
+  <h2>api_template: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_template_exports_getLibraryList">
+        getLibraryList
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_getLibrary">
+        getLibrary
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_addTemplate">
+        addTemplate
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_getTemplateList">
+        getTemplateList
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_delTemplate">
+        delTemplate
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_sendTemplate">
+        sendTemplate
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_template_exports_getLibraryList">
+    getLibraryList
+  </h3>
+
+  <p>获取小程序模板库标题列表</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getLibraryList()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>offset()</td>
+      <td colspan="2"><p>offset和count用于分页，表示从offset开始，拉取count条记录</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>count()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_template_exports_getLibrary">
+    getLibrary
+  </h3>
+
+  <p>获取模板库某个模板标题下关键词库</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getLibrary()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id()</td>
+      <td colspan="2"><p>模板标题id，可通过接口获取，也可登录小程序后台查看获取</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_template_exports_addTemplate">
+    addTemplate
+  </h3>
+
+  <p>组合模板并添加至帐号下的个人模板库</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.addTemplate()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id()</td>
+      <td colspan="2"><p>模板标题id，可通过接口获取，也可登录小程序后台查看获取</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>keyword_id_list()</td>
+      <td colspan="2"><p>开发者自行组合好的模板关键词列表，关键词顺序可以自由搭配（例如[3,5,4]或[4,5,3]），最多支持10个关键词组合</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_template_exports_getTemplateList">
+    getTemplateList
+  </h3>
+
+  <p>获取帐号下已存在的模板列表</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getTemplateList()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>offset()</td>
+      <td colspan="2"><p>offset和count用于分页，表示从offset开始，拉取count条记录</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>count()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_template_exports_delTemplate">
+    delTemplate
+  </h3>
+
+  <p>删除帐号下的某个模板</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.delTemplate()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>templateId(String)</td>
+      <td colspan="2"><p>小程序帐号下模板消息ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_template_exports_sendTemplate">
+    sendTemplate
+  </h3>
+
+  <p>发送模板消息<br />
+官方文档: https://developers.weixin.qq.com/miniprogram/dev/api/notice.html#%E5%8F%91%E9%80%81%E6%A8%A1%E7%89%88%E6%B6%88%E6%81%AF</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendTemplate()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid()</td>
+      <td colspan="2"><p>接收者（用户）的 openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>templateId()</td>
+      <td colspan="2"><p>所需下发的模板消息的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page()</td>
+      <td colspan="2"><p>点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数,（示例index?foo=bar）。该字段不填则模板无跳转。</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>form_id()</td>
+      <td colspan="2"><p>表单提交场景下，为 submit 事件带上的 formId；支付场景下，为本次支付的 prepay_id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>data()</td>
+      <td colspan="2"><p>模板内容，不填则下发空模板</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>color()</td>
+      <td colspan="2"><p>模板内容字体的颜色，不填默认黑色 【废弃】</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>emphasis_keyword()</td>
+      <td colspan="2"><p>模板需要放大的关键词，不填则默认无放大</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"><p>回调函数<br />
+Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_wxacode" class="api">
+  <h2>api_wxacode: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_wxacode_exports_getwxacode">
+        getwxacode
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_wxacode_exports_getwxacodeunlimit">
+        getwxacodeunlimit
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_wxacode_exports_createwxaqrcode">
+        createwxaqrcode
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_wxacode_exports_getwxacode">
+    getwxacode
+  </h3>
+
+  <p>获取小程序码</p>
+<p>接口A: 适用于需要的码数量较少的业务场景<br />
+注意：通过该接口生成的小程序码，永久有效，数量限制见文末说明，请谨慎使用。用户扫描该码进入小程序后，将直接进入 path 对应的页面。</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getwxacode()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page()</td>
+      <td colspan="2"><p>必须是已经发布的小程序存在的页面</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>width()</td>
+      <td colspan="2"><p>二维码的宽度</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>auto_color()</td>
+      <td colspan="2"><p>自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>line_color()</td>
+      <td colspan="2"><p>auth_color 为 false 时生效，使用 rgb 设置颜色 例如 {&quot;r&quot;:&quot;xxx&quot;,&quot;g&quot;:&quot;xxx&quot;,&quot;b&quot;:&quot;xxx&quot;},十进制表示</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>is_hyaline()</td>
+      <td colspan="2"><p>是否需要透明底色， is_hyaline 为true时，生成透明底色的小程序码</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_wxacode_exports_getwxacodeunlimit">
+    getwxacodeunlimit
+  </h3>
+
+  <p>获取小程序码</p>
+<p>接口A: 适用于需要的码数量极多的业务场景<br />
+注意：通过该接口生成的小程序码，永久有效，数量暂无限制。用户扫描该码进入小程序后，开发者需在对应页面获取的码中 scene 字段的值，再做处理逻辑。使用如下代码可以获取到二维码中的 scene 字段的值。调试阶段可以使用开发工具的条件编译自定义参数 scene=xxxx 进行模拟，开发工具模拟时的 scene 的参数值需要进行 urlencode</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getwxacodeunlimit()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>scene()</td>
+      <td colspan="2"><p>最大32个可见字符，只支持数字，大小写英文以及部分特殊字符：!#$&amp;'()*+,/:;=?@-._~，其它字符请自行编码为合法字符（因不支持%，中文无法使用 urlencode 处理，请使用其他编码方式）</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page()</td>
+      <td colspan="2"><p>必须是已经发布的小程序存在的页面</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>width()</td>
+      <td colspan="2"><p>二维码的宽度</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>auto_color()</td>
+      <td colspan="2"><p>自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>line_color()</td>
+      <td colspan="2"><p>auth_color 为 false 时生效，使用 rgb 设置颜色 例如 {&quot;r&quot;:&quot;xxx&quot;,&quot;g&quot;:&quot;xxx&quot;,&quot;b&quot;:&quot;xxx&quot;},十进制表示</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>is_hyaline()</td>
+      <td colspan="2"><p>是否需要透明底色， is_hyaline 为true时，生成透明底色的小程序码</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_wxacode_exports_createwxaqrcode">
+    createwxaqrcode
+  </h3>
+
+  <p>获取小程序二维码</p>
+<p>接口C：适用于需要的码数量较少的业务场景<br />
+注意：通过该接口生成的小程序二维码，永久有效，数量限制见文末说明，请谨慎使用。用户扫描该码进入小程序后，将直接进入 path 对应的页面。</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createwxaqrcode()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>path()</td>
+      <td colspan="2"><p>不能为空，最大长度 128 字节</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>width()</td>
+      <td colspan="2"><p>二维码的宽度</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_util" class="api">
+  <h2>util: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#util_exports_decryptPayload">
+        decryptPayload
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="util_exports_decryptPayload">
+    decryptPayload
+  </h3>
+
+  <p>对用户数据中的敏感数据进行解密</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.decryptPayload()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
