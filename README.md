@@ -11,6 +11,10 @@
 - [![Dependencies Status](https://david-dm.org/jerrwy/wechat-miniprogram-api.png)](https://david-dm.org/jerrwy/wechat-miniprogram-api)
 - [![Coverage Status](https://coveralls.io/repos/github/jerrwy/wechat-miniprogram-api/badge.svg?branch=master)](https://coveralls.io/github/jerrwy/wechat-miniprogram-api?branch=master)
 
+## 文档
+
+[接口文档](http://jerrwy.github.com/wechat-miniprogram-api/)
+
 ## 功能
 
 - [x] 登录
